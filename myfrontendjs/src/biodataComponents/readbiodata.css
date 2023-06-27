@@ -1,0 +1,41 @@
+.container {
+  margin: 20px;
+}
+
+.bio-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bio-table th,
+.bio-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.bio-table th:first-child,
+.bio-table td:first-child {
+  padding-left: 0;
+}
+
+.bio-table th:last-child,
+.bio-table td:last-child {
+  padding-right: 0;
+}
+
+.bio-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.bio-table button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.bio-table button:hover {
+  background-color: #45a049;
+}

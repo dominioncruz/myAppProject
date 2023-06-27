@@ -1,0 +1,22 @@
+version: '3'
+services:
+  database:
+    container_name: toothfixer-postgres
+    image: postgres:latest
+    ports:
+      - "5434:5432"
+    volumes:
+      - C:/Users/NEW/data/postgres/toothfixer:/data/postgres
+    env_file:
+      - myEnv.env
+  nginx:
+    container_name: toothfixer-nginx
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports:
+      - 80:80
+    restart:  always
+    extra_hosts:
+      - "toothfixer-waf:10.9.123.235"
+  
